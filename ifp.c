@@ -1,11 +1,22 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int main (void)
 {
     int i;              // loop variable
     int n;              // input
     int remaining;      // helping variable  
     int primeInput;     // check for prime number input
+
+    //clears screen
+    #ifdef __unix__  
+    {
+        system("clear");
+    }
+    #elif defined(_WIN32) || defined(WIN32)
+    {
+        system("cls");
+    }
+    #endif
 
     //receiving input
     printf("Please enter a composite positive number\n");
